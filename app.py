@@ -22,7 +22,7 @@ st.image("https://play-lh.googleusercontent.com/qPmIH0OemtPoTXyEztnpZVW-35sEWvrw
 app = hy.HydraApp(title='Diwan')
 
 ### Importing csv file from github onto streamlit
-df= pd.read_csv('https://raw.githubusercontent.com/SalemGrayzi/status/main/Statuscsv.csv')
+df= pd.read_csv('https://raw.githubusercontent.com/SalemGrayzi/status/main/Data.csv')
 
 ### Filling missing values in Adress column with the mode
 df['Address'] =  df['Address'].fillna('بشامون')
