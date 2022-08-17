@@ -8,3 +8,4 @@ markdown
 hydralit_components
 hydralit
 millify
+streamlit_metrics
