@@ -151,7 +151,6 @@ tdc.update_layout(title="Time to Deploy an Order",xaxis_title="Time in Minutes",
 #tdc=px.line(df, y=df['Time to deploy'].value_counts(),x=df['Time to deploy'].value_counts().index)
 #tdc.update_layout(title="Time to Deploy an Order",xaxis_title="Time in Hours and Minutes",yaxis_title="")
 
-
 #################################################################### This graph was sent into its area due to filtering reasoning
 #slides = st.sidebar.slider('Top n Locations', 0, 90, 5)
 #addy = df.groupby(['Address']).size().to_frame().sort_values([0], ascending = False).head(slides).reset_index()
