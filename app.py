@@ -15,7 +15,7 @@ import time
 from streamlit_metrics import metric, metric_row
 import io
 import hydralit as hy
- from millify import millify
+from millify import millify
 ### setting page to wide automatically to avoid it being centered
 st.set_page_config(layout="wide")
 ### Setting picture to dashboard and resizing it
