@@ -21,6 +21,9 @@ st.set_page_config(layout="wide")
 ### Setting picture to dashboard and resizing it
 st.image("https://play-lh.googleusercontent.com/qPmIH0OemtPoTXyEztnpZVW-35sEWvrw99DIX6n1sklf1mDekUxtMzyInpJlTOATsp5B",width=100)
 
+### changing time created into datetime with the specified format
+df['Time Created'] = pd.to_datetime(df['Time Created'], format='%I:%M:%S %p')
+
 ### Building the HydraApp
 app = hy.HydraApp(title='Diwan')
 
