@@ -21,9 +21,6 @@ st.set_page_config(layout="wide")
 ### Setting picture to dashboard and resizing it
 st.image("https://play-lh.googleusercontent.com/qPmIH0OemtPoTXyEztnpZVW-35sEWvrw99DIX6n1sklf1mDekUxtMzyInpJlTOATsp5B",width=100)
 
-### changing time created into datetime with the specified format
-df['Time Created'] = pd.to_datetime(df['Time Created'], format='%I:%M:%S %p')
-
 ### Building the HydraApp
 app = hy.HydraApp(title='Diwan')
 
@@ -44,6 +41,9 @@ df['Handheld Used'] = df['Handheld Used'].map(
                    {True:'Used PDA' ,False:"Didn't Use PDA"})
 df['OnlineApp'] = df['OnlineApp'].map(
                    {True:'Application' ,False:'Phone Call'})
+
+### changing time created into datetime with the specified format
+df['Time Created'] = pd.to_datetime(df['Time Created'], format='%I:%M:%S %p')
 
 ### In the bellow section it conatains all the graphs made
 
@@ -146,7 +146,6 @@ dfds1 = df.groupby(['Time to deploy']).size().to_frame().reset_index() ### Group
 dfds1.columns = ['Time to deploy', 'count'] ### adding the columns to the values returned previously 
 tdc = px.line(dfds1, x='Time to deploy', y= 'count') ### plotting the graph 
 tdc.update_layout(title="Time to Deploy an Order",xaxis_title="Time in Minutes",yaxis_title="") ### adding more details onto the graph
-tdc
 
 #################################################################### This graph was sent into its area due to filtering reasoning
 ### slider for filtering in graph
