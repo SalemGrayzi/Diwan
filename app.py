@@ -25,13 +25,13 @@ st.image("https://play-lh.googleusercontent.com/qPmIH0OemtPoTXyEztnpZVW-35sEWvrw
 app = hy.HydraApp(title='Diwan')
 
 ### Importing csv file from github onto streamlit by default, and can be used to import dataset
-d1,d2,d3=st.columns(3)
-with d1.expander('Upload Data'):
-     uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
-     if uploaded_file is None:
-        df= pd.read_csv('https://github.com/SalemGrayzi/status/blob/main/Statuscsv.csv?raw=true')
-     else:
-         df = pd.read_csv(uploaded_file)
+#d1,d2,d3=st.columns(3)
+#with d1.expander('Upload Data'):
+#     uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
+#     if uploaded_file is None:
+#        df= pd.read_csv('https://github.com/SalemGrayzi/status/blob/main/Statuscsv.csv?raw=true')
+#     else:
+#         df = pd.read_csv(uploaded_file)
 
 ### Filling missing values in Adress column with the mode
 df['Address'] =  df['Address'].fillna('بشامون')
